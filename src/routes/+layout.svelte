@@ -45,7 +45,7 @@
 			href="/works"
 			class={`hover:!text-third active:!text-third ${
 				$page.url.pathname === '/works' ? 'md:text-third' : ''
-			}`}>projects i've worked</NavLi
+			}`}>projects i've worked on</NavLi
 		>
 		<NavLi
 			href="https://drive.google.com/file/d/1Wawxb_MRFGVhsNKYELVWdaRYfEU1BXvN/view?usp=share_link"
