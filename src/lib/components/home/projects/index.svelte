@@ -10,7 +10,7 @@
 			style={`background-image: url(${ihavebuilt}); background-position: center center;
     background-repeat: no-repeat; background-size: cover;`}
 		>
-			<p class="font-sfprorounded text-white text-[54px] md:text-[35px] sm:text-[28px]">
+			<p class="font-sfprorounded text-white lg:text-[54px] md:text-[35px] text-[28px]">
 				Check out <br />
 				what I’ve built
 			</p>
@@ -23,7 +23,7 @@
 			style={`background-image: url(${ihavework}); background-position: center center;
     background-repeat: no-repeat; background-size: cover;`}
 		>
-			<p class="font-sfprorounded text-white text-[54px] md:text-[35px] sm:text-[28px]">
+			<p class="font-sfprorounded text-white lg:text-[54px] md:text-[35px] text-[28px]">
 				Check out the <br />
 				projects i've worked on
 			</p>

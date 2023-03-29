@@ -10,8 +10,8 @@
 </script>
 
 <div class=" h-full w-100">
-	<div class="px-20 py-20 h-full flex flex-col items-center justify-between bg-primary">
-		<h2 class="font-sfprorounded text-secondary text-[54px] md:text-[35px] my-10 mb-20">
+	<div class="px-5 lg:px-20 py-20 h-full flex flex-col items-center justify-between bg-primary">
+		<h2 class="font-sfprorounded text-secondary lg:text-[54px] md:text-[35px] text-[24px] text-center my-10 mb-20">
 			Projects I've built
 		</h2>
 		<Project

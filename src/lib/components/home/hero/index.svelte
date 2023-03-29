@@ -10,14 +10,13 @@
 </script>
 
 <div
-	class=" h-full w-100"
+	class=" h-full w-100 aspect-[4/3] lg:aspect-[4/2]"
 	style={`background-image: url(${hero}); background-position: bottom;
 background-repeat: no-repeat;
-aspect-ratio: 4/2;
 background-size: cover;`}
 >
 	<div class="px-10 lg:px-40 h-full flex flex-row items-center justify-between">
 		<Typewriter {strings} delay={150} />
-		<img src={illus} class="md:w-[40%] sm:w-[40%]"/>
+		<img src={illus} class="w-[40%]"/>
 	</div>
 </div>

@@ -20,7 +20,7 @@
 </script>
 
 <div class=" py-8 px-10">
-	<h3 class="font-sfprorounded text-secondary text-[54px] md:text-[35px] text-center mb-10">
+	<h3 class="font-sfprorounded text-secondary lg:text-[54px] md:text-[35px] text-[28px] text-center mb-10">
 		Find me on Medium
 	</h3>
 	{#if items.length}

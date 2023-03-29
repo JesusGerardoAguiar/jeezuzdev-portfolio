@@ -28,5 +28,5 @@
 			{/each}
 		</div>
 	</div>
-	<img src={image} class="w-full h-80 lg:w-auto object-cover lg:h-auto lg:object-none"/>
+	<img src={image} class="w-full h-[16rem] lg:w-auto object-cover lg:h-auto lg:object-none"/>
 </div>
