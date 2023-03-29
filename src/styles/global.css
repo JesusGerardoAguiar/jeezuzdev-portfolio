@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Montserratsemibold";
+    src: url("../lib/assets/fonts/Montserrat-SemiBold.ttf");
+  }
+
+  @font-face {
+    font-family: "MontserratRegular";
+    src: url("../lib/assets/fonts/Montserrat-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "sfprorounded";
+    src: url("../lib/assets/fonts/SF-Pro-Rounded-Bold.otf");
+  }
+
+  
+text{
+  @apply !text-third;
+}
+
+.mkc_circle-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+.mkc_circle-bg {
+  fill: none;
+}
+
+.mkc_circle {
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.mkc_info {
+  fill: #333;
+}
+
+.carousel-item {
+  @apply w-[80%] mx-5
+}
+
+.carousel-image {
+  @apply w-full object-cover;
+}
+
+.basic:before {
+  content: '';
+  display: block;
+
+  height: 20px;
+  width: 20px;
+  -webkit-animation: spin .8s infinite linear;
+          animation: spin .8s infinite linear;
+  border: 4px #F2E4D0 solid;
+  border-left-color: #76B29F;
+  border-radius: 100%; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

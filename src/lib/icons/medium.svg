@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="22" viewBox="0 0 37 22">
+  <defs>
+    <clipPath id="clip-medium">
+      <rect width="37" height="22"/>
+    </clipPath>
+  </defs>
+  <g id="medium" clip-path="url(#clip-medium)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(-10.178 -9)">
+      <g id="Symbol">
+        <path id="Path_242" data-name="Path 242" d="M315.341,290.251a10.281,10.281,0,1,1-10.28-10.351,10.316,10.316,0,0,1,10.28,10.351" transform="translate(-284.484 -270.124)" fill="#1b4a74"/>
+        <path id="Path_243" data-name="Path 243" d="M922.281,307c0,5.381-2.3,9.745-5.14,9.745S912,312.386,912,307s2.3-9.745,5.14-9.745,5.14,4.363,5.14,9.745" transform="translate(-880.146 -286.877)" fill="#1b4a74"/>
+        <path id="Path_244" data-name="Path 244" d="M1238.515,335.05c0,4.82-.809,8.73-1.808,8.73s-1.807-3.909-1.807-8.73.809-8.73,1.807-8.73,1.808,3.908,1.808,8.73" transform="translate(-1191.768 -314.922)" fill="#1b4a74"/>
+        <path id="Path_245" data-name="Path 245" d="M57.064,0H46.715V.009H10.349V0H0V40.169H4.174v.015H53.436v-.015h3.627ZM46.715,10.357V29.836H10.349V10.357Z" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
