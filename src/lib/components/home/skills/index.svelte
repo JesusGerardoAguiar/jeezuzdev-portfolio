@@ -3,16 +3,16 @@
 	import Percentage from './percentage.svelte';
 </script>
 
-<div class=" h-full w-full flex flex-row">
+<div class=" h-full w-full flex flex-row sm:!flex-wrap">
 	<div
-		class="w-[50%] flex flex-row items-center justify-center"
+		class="w-[100%] lg:w-[50%] sm:py-28 flex flex-row items-center justify-center"
 		style={`background-image: url(${skills}); background-position: center center;
 background-repeat: no-repeat; background-size: cover;
 `}
 	>
 		<p class="font-sfprorounded text-secondary text-[54px] md:text-[35px]">My awesome skills</p>
 	</div>
-	<div class="px-10 py-10 w-[50%] h-full flex flex-row items-baseline justify-between flex-wrap">
+	<div class="px-10 py-10 w-[100%] lg:w-[50%] h-full flex flex-row items-baseline justify-between flex-wrap">
 		<Percentage  />
 	</div>
 </div>

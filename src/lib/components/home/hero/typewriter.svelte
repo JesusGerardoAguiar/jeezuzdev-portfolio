@@ -35,7 +35,7 @@
 	});
 </script>
 
-<p class="font-sfprorounded text-secondary text-[54px] md:text-[35px]">
+<p class="font-sfprorounded text-secondary text-[54px] md:text-[25px] sm:text-[18px]">
 	{currentString}
 	{#if showCursor}
 		<span>|</span>

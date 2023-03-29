@@ -16,7 +16,9 @@
     font-family: "sfprorounded";
     src: url("../lib/assets/fonts/SF-Pro-Rounded-Bold.otf");
   }
-
+.container{
+@apply !px-1 lg:!px-40 !max-w-full;
+}
   
 text{
   @apply !text-third;

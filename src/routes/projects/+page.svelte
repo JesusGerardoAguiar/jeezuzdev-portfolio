@@ -5,8 +5,7 @@
 	import alexandria from '$lib/assets/builts/alexandria.png';
 	import Project from '$lib/components/projects/project.svelte';
 
-	import githubIcon from '$lib/icons/github.svg';
-	import youtubeIcon from '$lib/icons/youtube.svg';
+	
 	import webIcon from '$lib/icons/link.svg';
 </script>
 

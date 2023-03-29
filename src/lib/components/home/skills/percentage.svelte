@@ -24,7 +24,7 @@
 </script>
 
 {#each charts as chart, i}
-	<div class="mkCharts flex flex-col items-center w-[10rem] text-center my-5">
+	<div class="mkCharts flex flex-col items-center w-[8rem] text-center my-5">
 		<svg
 			class="mkc_circle-chart"
 			viewbox="0 0 36 36"

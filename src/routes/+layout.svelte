@@ -4,9 +4,27 @@
 	import twitterIcon from '$lib/icons/twitter.svg';
 	import mediumIcon from '$lib/icons/medium.svg';
 	import linkedinIcon from '$lib/icons/linkedin.svg';
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { Navbar, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	import { page } from '$app/stores';
 </script>
+<!-- Primary Meta Tags -->
+<title>Jeezuzdev - Fullstack Engineer</title>
+<meta name="title" content="Jeezuzdev - Fullstack Engineer">
+<meta name="description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jeezuzdev.vercel.app/">
+<meta property="og:title" content="Jeezuzdev - Fullstack Engineer">
+<meta property="og:description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+<meta property="og:image" content="https://i.ibb.co/vY6V9PT/download.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://jeezuzdev.vercel.app/">
+<meta property="twitter:title" content="Jeezuzdev - Fullstack Engineer">
+<meta property="twitter:description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+<meta property="twitter:image" content="https://i.ibb.co/vY6V9PT/download.png">
 
 <Navbar let:hidden let:toggle class="absolute !bg-transparent">
 	<NavHamburger on:click={toggle} />

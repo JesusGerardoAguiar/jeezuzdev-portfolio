@@ -24,7 +24,17 @@
 		Find me on Medium
 	</h3>
 	{#if items.length}
-		<swiper-container slides-per-view={4} speed={200} loop={true} autoplay={true} class="ml-5">
+		<swiper-container slides-per-view={4} speed={200} loop={true} autoplay={true} class="ml-5"  breakpoints={{
+			992: {
+			  slidesPerView: 3,
+			},
+			576: {
+			  slidesPerView: 2,
+			},
+			0: {
+			  slidesPerView: 1,
+			},
+		  }}>
 			{#each items as item}
 				<swiper-slide>
 					<div class="carousel-item" key={item.link}>

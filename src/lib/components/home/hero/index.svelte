@@ -16,8 +16,8 @@ background-repeat: no-repeat;
 aspect-ratio: 4/2;
 background-size: cover;`}
 >
-	<div class="px-40 h-full flex flex-row items-center justify-between">
+	<div class="px-10 lg:px-40 h-full flex flex-row items-center justify-between">
 		<Typewriter {strings} delay={150} />
-		<img src={illus} />
+		<img src={illus} class="md:w-[40%] sm:w-[40%]"/>
 	</div>
 </div>

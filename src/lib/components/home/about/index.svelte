@@ -3,10 +3,10 @@
 </script>
 
 <div class=" h-full w-100 py-8">
-	<div class="px-40 h-full flex flex-row items-center justify-between flex-wrap">
-		<img src={about} />
-		<p class="text-black text-[18px] leading-10 font-montserratregular w-[100%] lg:w-[70%]">
-			I’m full stack engineer with more than 4+ of experience working mainly with <span
+	<div class="px-20 lg:px-40 h-full flex flex-row items-center justify-between flex-wrap">
+		<img src={about} class="w-[10rem] lg:w-auto  m-auto mb-10"/>
+		<p class="text-black text-[14px] leading-8 font-montserratregular w-[100%] lg:w-[60%] text-center lg:text-start">
+			I’m full stack engineer with more than 4+ of experience working mainly with <br /><span
 				class="text-secondary font-montserratbold">React ecosystem and Typescript</span
 			>, <br /> I’m passionate about
 			<span class="text-secondary font-montserratbold">web3 technologies</span>
