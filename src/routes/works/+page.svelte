@@ -14,7 +14,7 @@
 <div class=" h-full w-100">
 	<div class=" py-20 h-full flex flex-col items-center justify-between bg-primary">
 		<h2 class="font-sfprorounded text-secondary text-[54px] md:text-[35px] my-10 mb-20">
-			Projects I've work
+			Projects I've worked on
 		</h2>
 		<Project
 			text={`Serraform Streaming is a suite of tools for building decentralized video experiences on the web3 platform Decentraland.`}
