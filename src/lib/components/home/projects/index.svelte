@@ -25,7 +25,7 @@
 		>
 			<p class="font-sfprorounded text-white text-[54px] md:text-[35px] sm:text-[28px]">
 				Check out the <br />
-				projects I have work
+				projects i've worked
 			</p>
 		</div>
 	</a>
