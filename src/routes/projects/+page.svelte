@@ -39,7 +39,7 @@
 			direction={false}
 		/>
 		<Project
-			text={`Lograf Agenda is an easy-to-manage appointment scheduling ecosystem that allows you to have your site where you can have information about your services and your clients can choose a date and time to schedule themselves. Using Lograf Admin the user can manage his schedules and days easily.`}
+			text={`A way for teachers and creators to upload their content into a blockchain, from studying material to whole online courses for students to purchase using their wallet so they can have unlimited and permanent access for the items stored on their wallets.`}
 			title={'Alexandria'}
 			image={alexandria}
 			links={[{ icon: webIcon, link: 'https://alexandria-theta.vercel.app/' }]}
