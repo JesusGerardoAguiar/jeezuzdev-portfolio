@@ -49,5 +49,8 @@
 			links={[{ icon: webIcon, link: 'https://alos80smalcriada.com.uy/' }]}
 			direction={false}
 		/>
+		<div class="py-8 bg-secondary w-full text-center">
+			<p class="font-sfprorounded text-primary lg:text-[24px] md:text-[25px] text-[16px]">If you wanna see more projects I've worked on, check out this link: <a href="https://lografdesign.com/ecommerce" target="_blank">here</a> </p>
+		</div>
 	</div>
 </div>
