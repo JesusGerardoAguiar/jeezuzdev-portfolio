@@ -6,18 +6,15 @@
 	<div class="px-20 lg:px-40 h-full flex flex-row items-center justify-between flex-wrap">
 		<img src={about} class="w-[10rem] lg:w-auto  m-auto mb-10"/>
 		<p class="text-black text-[14px] leading-8 font-montserratregular w-[100%] lg:w-[60%] text-center lg:text-start">
-			I’m full stack engineer with more than 4+ of experience working mainly with <br /><span
-				class="text-secondary font-montserratbold">React ecosystem and Typescript</span
-			>, <br /> I’m passionate about
+			As a full stack engineer with over 4+ years of experience, I specialize in the <br /><span
+				class="text-secondary font-montserratbold">React ecosystem and Typescript</span>, <br /> My passion for
 			<span class="text-secondary font-montserratbold">web3 technologies</span>
-			and what we can achieve with the power of decentralization, which lead me to a enroll in a
-			variety of programs and be part of online communities as {" "}<span class="text-secondary font-montserratbold"
+			and the potential they hold through decentralization has led me to enroll in various programs and become involved in online communities such as {" "}<span class="text-secondary font-montserratbold"
 				>Buildspace</span
-			>. Also, I consider myself as a
-			<span class="text-secondary font-montserratbold">builder</span>, I enjoy experiencing a lot
-			with new frontend technologies so I really like to build with tech I haven’t experience before
-			and share what I’ve done to the world. I like to write stuff on
-			<span class="text-secondary font-montserratbold">Medium</span> and watch a good movie or tv show.
+			>. I identify as a 
+			<span class="text-secondary font-montserratbold">builder</span>, constantly experimenting with new frontend technologies and building with technologies I have yet to experience.
+			I enjoy sharing my work with the world and often write on 
+			<span class="text-secondary font-montserratbold">Medium</span>.  In my free time, I like to watch a good movie or TV show.
 		</p>
 	</div>
 </div>
