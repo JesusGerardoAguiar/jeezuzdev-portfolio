@@ -47,11 +47,6 @@
 				$page.url.pathname === '/works' ? 'md:text-third' : ''
 			}`}>projects i've worked on</NavLi
 		>
-		<NavLi
-			href="https://drive.google.com/file/d/1Wawxb_MRFGVhsNKYELVWdaRYfEU1BXvN/view?usp=share_link"
-			target="_blank"
-			class="hover:!text-third active:!text-third">resume</NavLi
-		>
 	</NavUl>
 	<div class="flex flex-row justify-end items-center ml-auto">
 		<a class="mx-2" href="https://github.com/JesusGerardoAguiar/" target="_blank"
