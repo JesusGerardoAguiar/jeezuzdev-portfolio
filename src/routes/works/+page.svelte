@@ -8,7 +8,6 @@
 
 	import Project from '$lib/components/projects/project.svelte';
 
-	import githubIcon from '$lib/icons/github.svg';
 	import youtubeIcon from '$lib/icons/youtube.svg';
 	import webIcon from '$lib/icons/link.svg';
 </script>
@@ -62,14 +61,9 @@
 			title={'Serraform Streaming'}
 			image={serraform}
 			links={[
-				{ icon: githubIcon, label: 'GitHub', link: 'https://github.com/Serraform/Decentraland-Streaming' },
-				{ icon: webIcon, label: 'Website', link: 'https://decentral-demo-app.azurewebsites.net/' },
 				{ icon: youtubeIcon, label: 'YouTube', link: 'https://www.youtube.com/watch?v=6d4q7ToTUFs' }
 			]}
 			direction={false}
 		/>
-		<div class="py-8 bg-secondary w-full text-center">
-			<p class="font-sfprorounded text-primary lg:text-[24px] md:text-[25px] text-[16px]">If you wanna see more projects I've worked on, check out this link: <a href="https://lografdesign.com/ecommerce" target="_blank">here</a> </p>
-		</div>
 	</div>
 </div>
