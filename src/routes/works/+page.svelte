@@ -1,7 +1,9 @@
 <script>
-	import orangetheory from '$lib/assets/works/orangetheory.avif';
-	import barrysbootcamp from '$lib/assets/works/barrysbootcamp.jpg';
-	import anytimefitness from '$lib/assets/works/anytimefitness.jpg';
+	import orangetheory from '$lib/assets/works/orangetheory.svg';
+	import barrysbootcamp from '$lib/assets/works/barrysbootcamp.svg';
+	import anytimefitness from '$lib/assets/works/anytimefitness.svg';
+	import brokenyolk from '$lib/assets/works/brokenyolk.svg';
+	import perspire from '$lib/assets/works/perspire.svg';
 	import serraform from '$lib/assets/works/serraform.jpg';
 
 	import Project from '$lib/components/projects/project.svelte';
@@ -21,7 +23,10 @@
 			text={`As Engineering Manager, led the consolidation of two separate legacy platforms into a single unified CMS architecture serving 1,500+ studios across 24 countries, and architected a cloud-native analytics pipeline (Snowplow, Snowflake, AWS) that directly contributed to a 20% Q4 2024 revenue increase.`}
 			title={'Orangetheory Fitness'}
 			image={orangetheory}
-			links={[{ icon: webIcon, label: 'Website', link: 'https://www.orangetheory.com/' }]}
+			links={[
+				{ icon: webIcon, label: 'Website', link: 'https://www.orangetheory.com/' },
+				{ icon: webIcon, label: 'Webflow Case Study', link: 'https://webflow.com/customers/orangetheory-fitness' }
+			]}
 			direction={true}
 		/>
 		<Project
@@ -36,6 +41,20 @@
 			title={'Anytime Fitness'}
 			image={anytimefitness}
 			links={[{ icon: webIcon, label: 'Website', link: 'https://www.anytimefitness.com/' }]}
+			direction={true}
+		/>
+		<Project
+			text={`Led The Broken Yolk Cafe's migration from a legacy site to Webflow alongside a full rebranding, giving the diner chain a modern site and visual identity to match.`}
+			title={'The Broken Yolk Cafe'}
+			image={brokenyolk}
+			links={[{ icon: webIcon, label: 'Website', link: 'https://www.thebrokenyolkcafe.com/' }]}
+			direction={false}
+		/>
+		<Project
+			text={`Led the team building Perspire Sauna Studio's engineering foundation from the ground up on Webflow CMS, giving the business the ability to easily create new promos and packages and add new studio openings themselves without engineering involvement.`}
+			title={'Perspire Sauna Studio'}
+			image={perspire}
+			links={[{ icon: webIcon, label: 'Website', link: 'https://www.perspiresaunastudio.com/' }]}
 			direction={true}
 		/>
 		<Project
