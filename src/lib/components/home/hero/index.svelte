@@ -2,7 +2,7 @@
 	import Typewriter from './typewriter.svelte';
 	let strings = [
 		'Hi! I’m Jesus aka Jeezuz',
-		'I’m full stack developer',
+		'Engineering Manager & Staff Engineer',
 		'No. I cannot turn water into wine'
 	];
 	import hero from '$lib/assets/hero/hero.jpg';
@@ -17,6 +17,6 @@ background-size: cover;`}
 >
 	<div class="px-10 lg:px-40 h-full flex flex-row items-center justify-between">
 		<Typewriter {strings} delay={150} />
-		<img src={illus} class="w-[40%]"/>
+		<img src={illus} alt="Illustration of a developer at work" class="w-[40%]"/>
 	</div>
 </div>

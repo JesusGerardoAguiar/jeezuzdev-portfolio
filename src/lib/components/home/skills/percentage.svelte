@@ -2,23 +2,22 @@
 	// @ts-nocheck
 
 	export let charts = [
-		{ percent: 95,  title: 'React' },
-		{ percent: 90,  title: 'React Native' },
-		{ percent: 90,  title: 'HTML, CSS' },
-		{ percent: 90,  title: 'Javascript' },
 		{ percent: 90,  title: 'TypeScript' },
-		{ percent: 80,  title: 'Node' },
-		{ percent: 80,  title: 'AWS' },
-		{ percent: 60,  title: 'Mongo' },
-
-		{ percent: 70,  title: 'Docker' },
-		{ percent: 90,  title: 'UI/UX Design' },
-		{ percent: 80,  title: 'Design Patterns' },
-		{ percent: 80,  title: 'Next.js' },
-		{ percent: 75,  title: 'Solidity-Blockchain' },
+		{ percent: 90,  title: 'Node.js' },
+		{ percent: 88,  title: 'React' },
+		{ percent: 90,  title: 'Engineering Leadership' },
+		{ percent: 85,  title: 'Technical Recruiting' },
+		{ percent: 85,  title: 'Performance Management' },
+		{ percent: 80,  title: 'PostgreSQL' },
+		{ percent: 82,  title: 'AWS' },
+		{ percent: 80,  title: 'Production Incident Response' },
+		{ percent: 85,  title: 'AI-Assisted Development' },
+		{ percent: 75,  title: 'Docker & CI/CD' },
+		{ percent: 70,  title: 'GraphQL' },
+		{ percent: 65,  title: 'AWS CDK (IaC)' },
+		{ percent: 60,  title: 'MongoDB' },
 		{ percent: 45,  title: 'Svelte' },
-		{ percent: 30,  title: 'Rust' },
-		{ percent: 90,  title: 'Communication Skills' },
+		{ percent: 92,  title: 'Communication Skills' },
 		{ percent: 95,  title: 'Team work' }
 	];
 </script>

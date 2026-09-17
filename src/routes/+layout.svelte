@@ -8,22 +8,22 @@
 	import { page } from '$app/stores';
 </script>
 <!-- Primary Meta Tags -->
-<title>Jeezuzdev - Fullstack Engineer</title>
-<meta name="title" content="Jeezuzdev - Fullstack Engineer">
-<meta name="description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+<title>Jeezuzdev - Engineering Manager & Staff Engineer</title>
+<meta name="title" content="Jeezuzdev - Engineering Manager & Staff Engineer">
+<meta name="description" content="Hi there! My name is Jesús, an Engineering Manager and Staff Engineer with 8+ years building software, thanks for visiting my page!">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://jeezuzdev.vercel.app/">
-<meta property="og:title" content="Jeezuzdev - Fullstack Engineer">
-<meta property="og:description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+<meta property="og:url" content="https://jeezuzdev-portfolio.vercel.app/">
+<meta property="og:title" content="Jeezuzdev - Engineering Manager & Staff Engineer">
+<meta property="og:description" content="Hi there! My name is Jesús, an Engineering Manager and Staff Engineer with 8+ years building software, thanks for visiting my page!">
 <meta property="og:image" content="https://i.ibb.co/vY6V9PT/download.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://jeezuzdev.vercel.app/">
-<meta property="twitter:title" content="Jeezuzdev - Fullstack Engineer">
-<meta property="twitter:description" content="Hi there! My name is Jesús and I'm a fullstack engineer with React and a web3 developer, thanks for visiting my page!">
+<meta property="twitter:url" content="https://jeezuzdev-portfolio.vercel.app/">
+<meta property="twitter:title" content="Jeezuzdev - Engineering Manager & Staff Engineer">
+<meta property="twitter:description" content="Hi there! My name is Jesús, an Engineering Manager and Staff Engineer with 8+ years building software, thanks for visiting my page!">
 <meta property="twitter:image" content="https://i.ibb.co/vY6V9PT/download.png">
 
 <Navbar let:hidden let:toggle class="absolute !bg-transparent">
@@ -55,16 +55,16 @@
 	</NavUl>
 	<div class="flex flex-row justify-end items-center ml-auto">
 		<a class="mx-2" href="https://github.com/JesusGerardoAguiar/" target="_blank"
-			><img src={githubIcon} /></a
+			><img src={githubIcon} alt="GitHub" /></a
 		>
 		<a class="mx-2" href="https://twitter.com/jeezuzdev" target="_blank"
-			><img src={twitterIcon} /></a
+			><img src={twitterIcon} alt="Twitter" /></a
 		>
 		<a class="mx-2" href="https://medium.com/@aguiarjesus" target="_blank"
-			><img src={mediumIcon} /></a
+			><img src={mediumIcon} alt="Medium" /></a
 		>
 		<a class="mx-2" href="https://www.linkedin.com/in/aguiarjesus/" target="_blank"
-			><img src={linkedinIcon} /></a
+			><img src={linkedinIcon} alt="LinkedIn" /></a
 		>
 	</div>
 </Navbar>
@@ -73,16 +73,16 @@
 	<p class="font-sfprorounded text-third text-[12px]">Build with Svelte 2023</p>
 	<div class="flex flex-row justify-end items-center ml-auto">
 		<a class="mx-2" href="https://github.com/JesusGerardoAguiar/" target="_blank"
-			><img src={githubIcon} /></a
+			><img src={githubIcon} alt="GitHub" /></a
 		>
 		<a class="mx-2" href="https://twitter.com/jeezuzdev" target="_blank"
-			><img src={twitterIcon} /></a
+			><img src={twitterIcon} alt="Twitter" /></a
 		>
 		<a class="mx-2" href="https://medium.com/@aguiarjesus" target="_blank"
-			><img src={mediumIcon} /></a
+			><img src={mediumIcon} alt="Medium" /></a
 		>
 		<a class="mx-2" href="https://www.linkedin.com/in/aguiarjesus/" target="_blank"
-			><img src={linkedinIcon} /></a
+			><img src={linkedinIcon} alt="LinkedIn" /></a
 		>
 	</div>
 </div>
