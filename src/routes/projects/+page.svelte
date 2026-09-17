@@ -15,16 +15,14 @@
 			Projects I've built
 		</h2>
 		<Project
-			text={`Lograf Admin is an easy-to-manage CMS that allows you to have an administrator portal in
-    which you can manage your online store, controlling the handling of your products, order
-    status, agendas, and services.`}
+			text={`Lograf Admin is the CMS and administrator portal behind Lograf's ecommerce and appointment-scheduling products — a single dashboard where business owners manage products, order status, agendas, and services without touching code.`}
 			title={'Lograf Admin'}
 			image={lografadmin}
 			links={[]}
 			direction={false}
 		/>
 		<Project
-			text={`Lograf Ecommerce is an easy-to-manage online sales ecosystem that allows you to have your ecommerce site integrated into your commerce's internal system. It will allow you to have different payment methods to access your products. Using Lograf Admin the user can manage his online store, controlling the handling of their products and order status. Currently there are more than 30 online stores powered by Lograf Ecommerce`}
+			text={`Lograf Ecommerce is an easy-to-manage online store platform with MercadoPago checkout built in and a professional, responsive storefront out of the box. Using Lograf Admin, the business owner manages products and order status without touching code. More than 30 live stores have been powered by Lograf Ecommerce.`}
 			title={'Lograf Ecommerce'}
 			image={lografecommerce}
 			links={[]}
