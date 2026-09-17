@@ -10,6 +10,7 @@
 		{ percent: 85,  title: 'Performance Management' },
 		{ percent: 80,  title: 'PostgreSQL' },
 		{ percent: 82,  title: 'AWS' },
+		{ percent: 85,  title: 'Webflow' },
 		{ percent: 80,  title: 'Production Incident Response' },
 		{ percent: 85,  title: 'AI-Assisted Development' },
 		{ percent: 75,  title: 'Docker & CI/CD' },
