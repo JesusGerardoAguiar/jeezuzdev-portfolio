@@ -11,6 +11,12 @@
 	let items = [];
 	let failed = false;
 
+	function extractThumbnail(item) {
+		if (item.thumbnail) return item.thumbnail;
+		const match = item.description?.match(/<img[^>]+src="([^"]+)"/);
+		return match ? match[1] : '';
+	}
+
 	onMount(async () => {
 		try {
 			const res = await fetch(
@@ -19,7 +25,7 @@
 			if (!res.ok) throw new Error(`Request failed with status ${res.status}`);
 			const data = await res.json();
 			if (data.status !== 'ok') throw new Error('Feed unavailable');
-			items = data.items;
+			items = data.items.map((item) => ({ ...item, thumbnail: extractThumbnail(item) }));
 		} catch (err) {
 			console.error('Failed to load Medium articles', err);
 			failed = true;

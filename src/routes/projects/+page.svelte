@@ -20,14 +20,14 @@
     status, agendas, and services.`}
 			title={'Lograf Admin'}
 			image={lografadmin}
-			links={[{ icon: webIcon, label: 'Website', link: 'https://www.lografdesign.com/ecommerce' }]}
+			links={[]}
 			direction={false}
 		/>
 		<Project
 			text={`Lograf Ecommerce is an easy-to-manage online sales ecosystem that allows you to have your ecommerce site integrated into your commerce's internal system. It will allow you to have different payment methods to access your products. Using Lograf Admin the user can manage his online store, controlling the handling of their products and order status. Currently there are more than 30 online stores powered by Lograf Ecommerce`}
 			title={'Lograf Ecommerce'}
 			image={lografecommerce}
-			links={[{ icon: webIcon, label: 'Website', link: 'https://www.lografdesign.com/ecommerce' }]}
+			links={[]}
 			direction={true}
 		/>
 		<Project

@@ -17,16 +17,18 @@
 		<p>
 			{text}
 		</p>
-		<h3 class="font-sfprorounded text-secondary text-[18px] md:text-[15px] lg:text-[24px] mt-5 mb-2">
-			You can learn more about it in the following links
-		</h3>
-		<div class="flex flex-row items-center ">
-			{#each links as link}
-				<a href={link.link} target="_blank" class="mr-5">
-					<img src={link.icon} alt={link.label ?? 'link'} />
-				</a>
-			{/each}
-		</div>
+		{#if links.length}
+			<h3 class="font-sfprorounded text-secondary text-[18px] md:text-[15px] lg:text-[24px] mt-5 mb-2">
+				You can learn more about it in the following links
+			</h3>
+			<div class="flex flex-row items-center ">
+				{#each links as link}
+					<a href={link.link} target="_blank" class="mr-5">
+						<img src={link.icon} alt={link.label ?? 'link'} />
+					</a>
+				{/each}
+			</div>
+		{/if}
 	</div>
 	<img src={image} alt={title} class="w-full h-[16rem] lg:w-auto object-cover lg:h-auto lg:object-none"/>
 </div>
