@@ -23,10 +23,10 @@
 		<div class="flex flex-row items-center ">
 			{#each links as link}
 				<a href={link.link} target="_blank" class="mr-5">
-					<img src={link.icon} />
+					<img src={link.icon} alt={link.label ?? 'link'} />
 				</a>
 			{/each}
 		</div>
 	</div>
-	<img src={image} class="w-full h-[16rem] lg:w-auto object-cover lg:h-auto lg:object-none"/>
+	<img src={image} alt={title} class="w-full h-[16rem] lg:w-auto object-cover lg:h-auto lg:object-none"/>
 </div>
