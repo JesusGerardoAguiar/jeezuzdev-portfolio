@@ -195,7 +195,7 @@ export const work: WorkItem[] = [
 			'MercadoPago checkout built in',
 			'Responsive storefront out of the box, managed from Lograf Admin'
 		],
-		stack: [],
+		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws'],
 		links: []
 	},
 	{
@@ -215,7 +215,7 @@ export const work: WorkItem[] = [
 			'Business owners manage products and order status without touching code',
 			'Agendas and services for the appointment-scheduling product live in the same place'
 		],
-		stack: [],
+		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws'],
 		links: []
 	},
 	{
@@ -235,7 +235,7 @@ export const work: WorkItem[] = [
 			'Creators upload material and full courses',
 			'Students buy with their wallet and keep unlimited, permanent access'
 		],
-		stack: ['web3'],
+		stack: ['nextjs', 'metamask', 'polygon'],
 		links: []
 	},
 	{

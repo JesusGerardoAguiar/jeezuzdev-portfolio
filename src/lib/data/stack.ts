@@ -4,6 +4,8 @@ import {
 	siDocker,
 	siGithubactions,
 	siGraphql,
+	siMercadopago,
+	siMongodb,
 	siNestjs,
 	siNextdotjs,
 	siNodedotjs,
@@ -46,7 +48,8 @@ const glyphs = {
 		'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM2 21c1-4 3.5-6 7-6s6 2 7 6M17 11a3 3 0 1 0 0-6M19 15c1.8.7 3 2.5 3.5 6',
 	review: 'M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9',
 	siren: 'M7 18v-6a5 5 0 0 1 10 0v6M5 18h14v3H5zM12 2v2M4.2 5.2l1.4 1.4M19.8 5.2l-1.4 1.4',
-	spec: 'M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 15h6M9 18h4'
+	spec: 'M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 15h6M9 18h4',
+	wallet: 'M3 7a2 2 0 0 1 2-2h13v4M3 7v11a2 2 0 0 0 2 2h15V9H5a2 2 0 0 1-2-2zM16 14.5h.01'
 };
 
 export const stack = {
@@ -64,6 +67,9 @@ export const stack = {
 	webflow: brand('Webflow', siWebflow),
 	claude: brand('Claude', siClaude),
 	polygon: brand('Polygon', siPolygon),
+	mongodb: brand('MongoDB', siMongodb),
+	mercadopago: brand('MercadoPago', siMercadopago),
+	metamask: { name: 'MetaMask', glyph: glyphs.wallet },
 	snowplow: { name: 'Snowplow', glyph: glyphs.wave },
 	bedrock: { name: 'AWS Bedrock', glyph: glyphs.sparkle },
 	pinecone: { name: 'Pinecone', glyph: glyphs.tree },
@@ -82,7 +88,7 @@ export const stackGroups: { label: string; items: StackKey[] }[] = [
 	{ label: 'Build', items: ['typescript', 'react', 'nextjs', 'nodejs', 'nestjs', 'graphql'] },
 	{
 		label: 'Data and cloud',
-		items: ['postgresql', 'aws', 'docker', 'cicd', 'snowflake', 'webflow']
+		items: ['postgresql', 'mongodb', 'aws', 'docker', 'cicd', 'snowflake', 'webflow']
 	},
 	{ label: 'AI', items: ['claude', 'bedrock', 'pinecone', 'cursor'] },
 	{ label: 'Leading teams', items: ['hiring', 'performance', 'incidents', 'specs'] }
