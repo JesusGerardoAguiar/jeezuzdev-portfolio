@@ -1,19 +1,24 @@
 import {
 	siAmazonwebservices,
 	siClaude,
+	siDecentraland,
+	siDigitalocean,
 	siDocker,
 	siGithubactions,
 	siGraphql,
 	siMercadopago,
 	siMongodb,
 	siNestjs,
+	siNetlify,
 	siNextdotjs,
 	siNodedotjs,
 	siPolygon,
+	siPosthog,
 	siPostgresql,
 	siReact,
 	siSnowflake,
 	siTypescript,
+	siVercel,
 	siWebflow
 } from 'simple-icons';
 
@@ -40,14 +45,14 @@ const glyphs = {
 	sparkle:
 		'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z',
 	cursor: 'M5 3l14 8-6 2-2 6z',
-	cube: 'M12 2l9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10',
-	chart: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
-	wave: 'M2 12c2.5-5 5-5 7.5 0s5 5 7.5 0 3.5-3 5-2',
 	people:
 		'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM2 21c1-4 3.5-6 7-6s6 2 7 6M17 11a3 3 0 1 0 0-6M19 15c1.8.7 3 2.5 3.5 6',
 	review: 'M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9',
 	siren: 'M7 18v-6a5 5 0 0 1 10 0v6M5 18h14v3H5zM12 2v2M4.2 5.2l1.4 1.4M19.8 5.2l-1.4 1.4',
 	spec: 'M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 15h6M9 18h4',
+	azure: 'M10 3L3 19h5l8-16zM13 9l-3 7 4 3h7z',
+	broadcast:
+		'M12 12h.01M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8',
 	wallet: 'M3 7a2 2 0 0 1 2-2h13v4M3 7v11a2 2 0 0 0 2 2h15V9H5a2 2 0 0 1-2-2zM16 14.5h.01'
 };
 
@@ -68,12 +73,16 @@ export const stack = {
 	polygon: brand('Polygon', siPolygon),
 	mongodb: brand('MongoDB', siMongodb),
 	mercadopago: brand('MercadoPago', siMercadopago),
+	posthog: brand('PostHog', siPosthog),
+	decentraland: brand('Decentraland', siDecentraland),
+	netlify: brand('Netlify', siNetlify),
+	digitalocean: brand('DigitalOcean', siDigitalocean),
+	vercel: brand('Vercel', siVercel),
+	azure: { name: 'Azure', glyph: glyphs.azure },
+	livepeer: { name: 'Livepeer', glyph: glyphs.broadcast },
 	metamask: { name: 'MetaMask', glyph: glyphs.wallet },
-	snowplow: { name: 'Snowplow', glyph: glyphs.wave },
 	bedrock: { name: 'AWS Bedrock', glyph: glyphs.sparkle },
 	cursor: { name: 'Cursor', glyph: glyphs.cursor },
-	web3: { name: 'Web3', glyph: glyphs.cube },
-	analytics: { name: 'Analytics', glyph: glyphs.chart },
 	hiring: { name: 'Hiring', glyph: glyphs.people },
 	performance: { name: 'Performance reviews', glyph: glyphs.review },
 	incidents: { name: 'Incident response', glyph: glyphs.siren },

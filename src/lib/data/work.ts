@@ -72,7 +72,7 @@ export const work: WorkItem[] = [
 			'Migrated content, data streams, normalization and localization without taking the product down',
 			'Architected a cloud-native analytics pipeline on Snowplow, Snowflake and AWS'
 		],
-		stack: ['webflow', 'react', 'snowplow', 'snowflake', 'aws'],
+		stack: ['react', 'webflow', 'aws', 'snowflake', 'nodejs', 'typescript'],
 		links: [
 			{ label: 'Visit the site', href: 'https://www.orangetheory.com/' },
 			{
@@ -100,7 +100,7 @@ export const work: WorkItem[] = [
 			'Redesigned how analytics data is ingested, reviewed, and flows into reporting',
 			'Gave the team clean, reliable visibility into their funnel'
 		],
-		stack: ['webflow', 'analytics'],
+		stack: ['nextjs', 'webflow', 'aws', 'snowflake', 'nodejs', 'typescript'],
 		links: []
 	},
 	{
@@ -123,7 +123,7 @@ export const work: WorkItem[] = [
 			'Reduced duplication and enforced a consistent frontend standard across both brands',
 			'Helped onboard the account, a team that adopted our ways of working from day one'
 		],
-		stack: ['webflow', 'react'],
+		stack: ['nextjs', 'webflow', 'aws', 'snowflake', 'nodejs', 'typescript'],
 		links: []
 	},
 	{
@@ -144,7 +144,7 @@ export const work: WorkItem[] = [
 			'Led the migration from the legacy site to Webflow',
 			'Shipped the new site alongside a full rebrand'
 		],
-		stack: ['webflow'],
+		stack: ['nextjs', 'webflow', 'aws', 'nodejs', 'typescript'],
 		links: []
 	},
 	{
@@ -166,7 +166,7 @@ export const work: WorkItem[] = [
 			'Set it up so the business creates promos and packages without engineering',
 			'Made adding new studio openings a content task, not a dev ticket'
 		],
-		stack: ['webflow'],
+		stack: ['nextjs', 'webflow', 'aws', 'posthog', 'nodejs', 'typescript'],
 		links: []
 	},
 	{
@@ -189,7 +189,7 @@ export const work: WorkItem[] = [
 			'Transaction signing across the main Web3 wallets',
 			'Real-time streams on Livepeer'
 		],
-		stack: ['polygon', 'web3'],
+		stack: ['nextjs', 'polygon', 'metamask', 'azure', 'decentraland', 'livepeer'],
 		links: [{ label: 'Watch the demo', href: 'https://www.youtube.com/watch?v=6d4q7ToTUFs' }]
 	},
 	{
@@ -210,7 +210,7 @@ export const work: WorkItem[] = [
 			'MercadoPago checkout built in',
 			'Responsive storefront out of the box, managed from Lograf Admin'
 		],
-		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws'],
+		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws', 'netlify', 'digitalocean'],
 		links: []
 	},
 	{
@@ -230,7 +230,7 @@ export const work: WorkItem[] = [
 			'Business owners manage products and order status without touching code',
 			'Agendas and services for the appointment-scheduling product live in the same place'
 		],
-		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws'],
+		stack: ['react', 'nodejs', 'mongodb', 'mercadopago', 'aws', 'netlify', 'digitalocean'],
 		links: []
 	},
 	{
@@ -250,7 +250,7 @@ export const work: WorkItem[] = [
 			'Creators upload material and full courses',
 			'Students buy with their wallet and keep unlimited, permanent access'
 		],
-		stack: ['nextjs', 'metamask', 'polygon'],
+		stack: ['nextjs', 'metamask', 'polygon', 'vercel'],
 		links: []
 	},
 	{
