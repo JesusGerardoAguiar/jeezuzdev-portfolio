@@ -1,8 +1,4 @@
 import orangetheory from '$lib/assets/works/orangetheory.svg';
-import barrys from '$lib/assets/works/barrysbootcamp.svg';
-import anytimefitness from '$lib/assets/works/anytimefitness.svg';
-import brokenyolk from '$lib/assets/works/brokenyolk.svg';
-import perspire from '$lib/assets/works/perspire.svg';
 import serraform from '$lib/assets/works/serraform.jpg';
 import lografecommerce from '$lib/assets/builts/lografecommerce.png';
 import lografadmin from '$lib/assets/builts/lografadmin.png';
@@ -20,8 +16,12 @@ export interface WorkItem {
 	slug: string;
 	group: WorkGroup;
 	name: string;
-	/** Square logo shown in lists. Falls back to `mark` on `color`. */
+	/** Square logo shown in lists. Falls back to `glyph`, then `mark`, on `color`. */
 	logo?: string;
+	/** Stroke icon path for clients shown by industry instead of by name */
+	glyph?: string;
+	/** Industry tag, shown on client work */
+	industry?: string;
 	/** Wide screenshot shown on the case page instead of the logo. */
 	shot?: string;
 	mark: string;
@@ -43,12 +43,22 @@ export const groups: { id: WorkGroup; label: string }[] = [
 	{ id: 'system', label: 'Systems I designed' }
 ];
 
+// Some clients can't be named publicly, so they're described by what they are
+// and drawn with an industry icon instead of their logo
+const glyphs = {
+	pulse: 'M3 12h4l3-7 4 14 3-7h4',
+	dumbbell: 'M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12',
+	steam: 'M8 3c-1.5 2 1.5 3 0 5M12 3c-1.5 2 1.5 3 0 5M16 3c-1.5 2 1.5 3 0 5M4 12h16v8H4z',
+	fork: 'M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2.5 2-2.5 7 0 9v9'
+};
+
 export const work: WorkItem[] = [
 	{
 		slug: 'orangetheory',
 		group: 'client',
 		name: 'Orangetheory Fitness',
 		logo: orangetheory,
+		industry: 'FitTech',
 		mark: 'OT',
 		color: '#F26B21',
 		role: 'Engineering Manager',
@@ -72,94 +82,99 @@ export const work: WorkItem[] = [
 		]
 	},
 	{
-		slug: 'barrys',
+		slug: 'boutique-fitness',
 		group: 'client',
-		name: "Barry's",
-		logo: barrys,
-		mark: 'B',
-		color: '#D7263D',
+		name: 'Boutique fitness brand',
+		glyph: glyphs.pulse,
+		industry: 'FitTech',
+		mark: 'BF',
+		color: '#1B4A74',
 		role: 'Engineering Manager',
 		tagline: 'Webflow migration and analytics',
 		headline: 'A cleaner view of the',
 		highlight: 'funnel',
 		summary:
-			"I led Barry's migration from a legacy WordPress site to Webflow, with a specific focus on analytics architecture.",
+			'A premium boutique fitness brand. I led its migration from a legacy WordPress site to Webflow, with a specific focus on analytics architecture.',
 		did: [
 			'Led the migration from WordPress to Webflow',
 			'Redesigned how analytics data is ingested, reviewed, and flows into reporting',
 			'Gave the team clean, reliable visibility into their funnel'
 		],
 		stack: ['webflow', 'analytics'],
-		links: [{ label: 'Visit the site', href: 'https://www.barrys.com/' }]
+		links: []
 	},
 	{
-		slug: 'anytime-fitness',
+		slug: 'gym-franchise',
 		group: 'client',
-		name: 'Anytime Fitness',
-		logo: anytimefitness,
-		mark: 'AF',
-		color: '#6E3FA3',
+		name: 'Global gym franchise',
+		glyph: glyphs.dumbbell,
+		industry: 'FitTech',
+		mark: 'GF',
+		color: '#2E7D69',
 		role: 'Engineering Manager',
 		tagline: 'Shared React component library',
 		headline: 'One frontend standard across',
 		highlight: 'two brands',
 		summary:
-			"I led Anytime Fitness's migration from legacy WordPress to Webflow, working directly with the Orangetheory engineering team so both brands build on the same components.",
+			'A global 24/7 gym franchise. I led its migration from legacy WordPress to Webflow, working directly with the engineering team of a sister brand so both build on the same components.',
 		did: [
 			'Led the migration from WordPress to Webflow',
-			'Built and shared React component libraries with the Orangetheory team',
+			'Built and shared React component libraries with the sister brand',
 			'Reduced duplication and enforced a consistent frontend standard across both brands',
 			'Helped onboard the account, a team that adopted our ways of working from day one'
 		],
 		stack: ['webflow', 'react'],
-		links: [{ label: 'Visit the site', href: 'https://www.anytimefitness.com/' }]
+		links: []
 	},
 	{
-		slug: 'broken-yolk',
+		slug: 'restaurant-chain',
 		group: 'client',
-		name: 'The Broken Yolk Cafe',
-		logo: brokenyolk,
-		mark: 'BY',
-		color: '#F5C542',
+		name: 'Breakfast restaurant chain',
+		glyph: glyphs.fork,
+		industry: 'Hospitality',
+		mark: 'RC',
+		color: '#C2410C',
 		role: 'Engineering Manager',
 		tagline: 'Migration and rebrand',
 		headline: 'A new site and identity, shipped',
 		highlight: 'together',
 		summary:
-			"I led The Broken Yolk Cafe's migration from a legacy site to Webflow alongside a full rebrand, giving the diner chain a modern site and a visual identity to match.",
+			'A breakfast and brunch restaurant chain. I led its migration from a legacy site to Webflow alongside a full rebrand, giving the chain a modern site and a visual identity to match.',
 		did: [
 			'Led the migration from the legacy site to Webflow',
 			'Shipped the new site alongside a full rebrand'
 		],
 		stack: ['webflow'],
-		links: [{ label: 'Visit the site', href: 'https://www.thebrokenyolkcafe.com/' }]
+		links: []
 	},
 	{
-		slug: 'perspire',
+		slug: 'sauna-studio',
 		group: 'client',
-		name: 'Perspire Sauna Studio',
-		logo: perspire,
-		mark: 'PS',
-		color: '#2F6F62',
+		name: 'Sauna and wellness franchise',
+		glyph: glyphs.steam,
+		industry: 'Wellness',
+		mark: 'SW',
+		color: '#8A5A2B',
 		role: 'Engineering Manager',
 		tagline: 'CMS foundation from zero',
 		headline: 'A CMS the business runs',
 		highlight: 'on its own',
 		summary:
-			"I led the team that built Perspire Sauna Studio's engineering foundation from the ground up on Webflow CMS.",
+			"A growing sauna and wellness franchise. I led the team that built its engineering foundation from the ground up on Webflow CMS.",
 		did: [
 			'Built the engineering foundation from scratch on Webflow CMS',
 			'Set it up so the business creates promos and packages without engineering',
 			'Made adding new studio openings a content task, not a dev ticket'
 		],
 		stack: ['webflow'],
-		links: [{ label: 'Visit the site', href: 'https://www.perspiresaunastudio.com/' }]
+		links: []
 	},
 	{
 		slug: 'serraform',
 		group: 'client',
 		name: 'Serraform Streaming',
 		logo: serraform,
+		industry: 'Web3',
 		mark: 'SS',
 		color: '#4B5563',
 		role: 'Lead Frontend Engineer',

@@ -20,7 +20,9 @@
 <article class="flex flex-col gap-8 px-4 py-6 md:gap-10 md:px-16 md:py-10">
 	<div class="flex flex-col-reverse gap-8 lg:flex-row lg:items-center lg:gap-12">
 		<div class="min-w-0 flex-1">
-			<p class="label-caps">{groupLabel} · {item.role}</p>
+			<p class="label-caps">
+				{groupLabel}{item.industry ? ` · ${item.industry}` : ''} · {item.role}
+			</p>
 			<h1
 				class="mt-3 font-display text-[32px] font-extrabold leading-[1.1] text-ink md:text-[50px]"
 			>

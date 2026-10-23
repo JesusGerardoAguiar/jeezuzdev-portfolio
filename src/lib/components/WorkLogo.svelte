@@ -21,6 +21,23 @@
 		class="flex-none object-cover {round ? 'rounded-full' : 'rounded-md'}"
 		style="width: {size}px; height: {size}px"
 	/>
+{:else if item.glyph}
+	<span
+		class="flex flex-none items-center justify-center {round ? 'rounded-full' : 'rounded-md'}"
+		style="width: {size}px; height: {size}px; background: {item.color}"
+		aria-hidden="true"
+	>
+		<svg
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke={isLight(item.color) ? '#17324D' : '#FFFFFF'}
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			style="width: {Math.round(size * 0.55)}px; height: {Math.round(size * 0.55)}px"
+			><path d={item.glyph} /></svg
+		>
+	</span>
 {:else}
 	<span
 		class="flex flex-none items-center justify-center font-bold {isLight(item.color)
