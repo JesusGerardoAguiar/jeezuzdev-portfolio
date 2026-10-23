@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import { siGithub } from 'simple-icons';
 	import SpeedDial from '$lib/components/SpeedDial.svelte';
-	import MenuBar from '$lib/components/MenuBar.svelte';
+	import Dock from '$lib/components/Dock.svelte';
 	import type { WorkItem } from '$lib/data/work';
 
 	const title = 'Jesús Aguiar · Staff Engineer / Engineering Manager';
@@ -66,15 +66,15 @@
 	Skip to content
 </a>
 
-<header class="sticky top-0 z-30 border-b-[1.5px] border-navy bg-white">
+<!-- Phone only; on desktop the Dock is the navigation -->
+<header class="sticky top-0 z-30 border-b-[1.5px] border-navy bg-white md:hidden">
 	<div
-		class="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-4 md:h-[60px] md:px-12"
+		class="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-4"
 	>
-		<a href="/" class="font-display text-xl font-extrabold text-navy md:text-[22px]">
+		<a href="/" class="font-display text-xl font-extrabold text-navy">
 			jeezuz<span class="text-tealdeep">.dev</span>
 		</a>
 		<nav aria-label="Main" class="flex items-center gap-1">
-			<MenuBar />
 			<a
 				href="https://github.com/JesusGerardoAguiar/"
 				target="_blank"
@@ -163,10 +163,11 @@
 </main>
 
 <footer
-	class="mx-auto flex max-w-[1440px] items-center justify-between px-4 pb-28 pt-6 text-xs text-muted md:px-16 md:pb-10 md:pr-36"
+	class="mx-auto flex max-w-[1440px] items-center justify-between px-4 pb-28 pt-6 text-xs text-muted md:px-16 md:pb-28 md:pr-36"
 >
 	<span>Jesús Aguiar · Montevideo, Uruguay</span>
 	<span>Built with SvelteKit</span>
 </footer>
 
+<Dock />
 <SpeedDial />
