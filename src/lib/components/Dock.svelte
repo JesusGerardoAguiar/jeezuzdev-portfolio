@@ -34,7 +34,7 @@
 	const about = [
 		{ title: 'Who I am', text: '8+ years shipping. A manager who still reviews PRs.' },
 		{ title: 'How I work', text: 'Ship small, measure everything, write things down.' },
-		{ title: "What I'm looking for", text: 'Remote Staff, EM, or Product Engineer roles.' }
+		{ title: 'What I lead', text: 'Product teams for FitTech enterprise clients.' }
 	];
 
 	const actions = [

@@ -20,7 +20,7 @@ export interface WorkItem {
 	logo?: string;
 	/** Stroke icon path for clients shown by industry instead of by name */
 	glyph?: string;
-	/** Industry tag, shown on client work */
+	/** Industry tag, shown on selected work */
 	industry?: string;
 	/** Wide screenshot shown on the case page instead of the logo. */
 	shot?: string;
@@ -38,7 +38,7 @@ export interface WorkItem {
 }
 
 export const groups: { id: WorkGroup; label: string }[] = [
-	{ id: 'client', label: 'Client work' },
+	{ id: 'client', label: 'Selected work' },
 	{ id: 'own', label: 'Built on my own' },
 	{ id: 'system', label: 'Systems I designed' }
 ];

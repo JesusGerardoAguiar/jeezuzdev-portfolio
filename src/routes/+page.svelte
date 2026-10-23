@@ -26,8 +26,8 @@
 			icon: 'M4 12h4l3-8 4 16 3-8h2'
 		},
 		{
-			title: "What I'm looking for",
-			text: 'Remote Staff, EM, or Product Engineer roles.',
+			title: 'What I lead',
+			text: 'Product teams for FitTech enterprise clients.',
 			stroke: '#2E7D69',
 			icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z'
 		}
@@ -89,14 +89,7 @@
 		</MacWindow>
 
 		<MacWindow title="Right now">
-			<div class="flex items-start justify-between gap-3">
-				<p class="text-[13px] text-muted">Outliant, now part of Ignite.</p>
-				<span
-					class="inline-flex flex-none items-center gap-1.5 rounded-full bg-teal/25 px-2.5 py-1 text-xs font-semibold text-tealdeep"
-				>
-					<span class="h-[7px] w-[7px] rounded-full bg-teal" />Open to roles
-				</span>
-			</div>
+			<p class="text-[13px] text-muted">Outliant, now part of Ignite.</p>
 			<p class="text-[15px] leading-relaxed text-body">
 				Leading 5 to 6 concurrent product teams for FitTech enterprise clients. Architecture, code
 				review and production incidents are part of my week, not something I delegate.
@@ -112,7 +105,7 @@
 			</dl>
 		</MacWindow>
 
-		<MacWindow title="Client work" id="work" class="md:col-span-2 xl:col-span-1 xl:row-span-2">
+		<MacWindow title="Selected work" id="work" class="md:col-span-2 xl:col-span-1 xl:row-span-2">
 			<p class="text-[13px] text-muted">Enterprise brands my teams ship for.</p>
 			<ul class="grid gap-2 md:grid-cols-2 xl:grid-cols-1">
 				{#each clients as client}
