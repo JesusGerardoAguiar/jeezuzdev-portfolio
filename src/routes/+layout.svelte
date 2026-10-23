@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { siGithub } from 'simple-icons';
 	import SpeedDial from '$lib/components/SpeedDial.svelte';
+	import MenuBar from '$lib/components/MenuBar.svelte';
 	import type { WorkItem } from '$lib/data/work';
 
 	const title = 'Jesús Aguiar · Staff Engineer / Engineering Manager';
@@ -28,7 +29,7 @@
 		{ label: 'Writing', href: '/#writing', icon: 'M4 4h10l6 6v10H4zM14 4v6h6M8 14h8M8 17h5' }
 	];
 
-	// Work and Built both open the work section; which one is lit depends on the project's group
+	// Phone section bar: Work and Built both open the work section; which one is lit depends on the project's group
 	$: group = ($page.data.item as WorkItem | undefined)?.group;
 	$: active = (label: string) =>
 		label === 'Work'
@@ -73,21 +74,7 @@
 			jeezuz<span class="text-tealdeep">.dev</span>
 		</a>
 		<nav aria-label="Main" class="flex items-center gap-1">
-			<ul class="hidden items-center gap-1 md:flex">
-				{#each nav as item}
-					<li>
-						<a
-							href={item.href}
-							class="inline-flex h-11 items-center rounded-full px-4 text-sm font-semibold text-navy hover:bg-navy/10 {active(
-								item.label
-							)
-								? 'bg-navy/10'
-								: ''}"
-							aria-current={active(item.label) ? 'page' : undefined}>{item.label}</a
-						>
-					</li>
-				{/each}
-			</ul>
+			<MenuBar />
 			<a
 				href="https://github.com/JesusGerardoAguiar/"
 				target="_blank"

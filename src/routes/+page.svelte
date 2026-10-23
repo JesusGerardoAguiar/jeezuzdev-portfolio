@@ -6,6 +6,7 @@
 	import WorkLogo from '$lib/components/WorkLogo.svelte';
 	import { inGroup } from '$lib/data/work';
 	import { stackGroups } from '$lib/data/stack';
+	import { posts, loadPosts } from '$lib/data/posts';
 
 	const clients = inGroup('client');
 	const built = [...inGroup('own'), ...inGroup('system')];
@@ -38,30 +39,7 @@
 		{ value: 'GMT-3', label: 'Montevideo' }
 	];
 
-	// Shown until (or if) the live feed loads
-	let posts = [
-		{ title: 'Doing Code Review to Claude', link: 'https://medium.com/@aguiarjesus' },
-		{ title: 'My first Svelte library', link: 'https://medium.com/@aguiarjesus' },
-		{ title: 'Taming the useState Hell', link: 'https://medium.com/@aguiarjesus' },
-		{ title: 'Bundlr + Arweave + NextJS', link: 'https://medium.com/@aguiarjesus' }
-	];
-
-	onMount(async () => {
-		try {
-			const res = await fetch(
-				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aguiarjesus'
-			);
-			if (!res.ok) return;
-			const data = await res.json();
-			if (data.status === 'ok' && data.items?.length) {
-				posts = data.items
-					.slice(0, 4)
-					.map((i: { title: string; link: string }) => ({ title: i.title, link: i.link }));
-			}
-		} catch {
-			// keep the fallback list
-		}
-	});
+	onMount(loadPosts);
 </script>
 
 <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-4 pb-6 pt-6 md:gap-7 md:px-16 md:pt-8">
@@ -185,7 +163,7 @@
 		<MacWindow title="Writing" id="writing" class="md:col-span-2 xl:col-span-1">
 			<p class="text-[13px] text-muted">Notes from the work, on Medium.</p>
 			<ol class="flex flex-col gap-2.5">
-				{#each posts as post, i}
+				{#each $posts as post, i}
 					<li>
 						<a
 							href={post.link}
