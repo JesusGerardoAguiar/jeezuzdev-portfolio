@@ -39,7 +39,6 @@ const brand = (name: string, icon: { path: string; hex: string }, note?: string)
 const glyphs = {
 	sparkle:
 		'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z',
-	tree: 'M12 3v18M12 8l-5-3M12 8l5-3M12 14l-6-3M12 14l6-3',
 	cursor: 'M5 3l14 8-6 2-2 6z',
 	cube: 'M12 2l9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10',
 	chart: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
@@ -72,7 +71,6 @@ export const stack = {
 	metamask: { name: 'MetaMask', glyph: glyphs.wallet },
 	snowplow: { name: 'Snowplow', glyph: glyphs.wave },
 	bedrock: { name: 'AWS Bedrock', glyph: glyphs.sparkle },
-	pinecone: { name: 'Pinecone', glyph: glyphs.tree },
 	cursor: { name: 'Cursor', glyph: glyphs.cursor },
 	web3: { name: 'Web3', glyph: glyphs.cube },
 	analytics: { name: 'Analytics', glyph: glyphs.chart },
@@ -90,6 +88,6 @@ export const stackGroups: { label: string; items: StackKey[] }[] = [
 		label: 'Data and cloud',
 		items: ['postgresql', 'mongodb', 'aws', 'docker', 'cicd', 'snowflake', 'webflow']
 	},
-	{ label: 'AI', items: ['claude', 'bedrock', 'pinecone', 'cursor'] },
+	{ label: 'AI', items: ['claude', 'bedrock', 'cursor'] },
 	{ label: 'Leading teams', items: ['hiring', 'performance', 'incidents', 'specs'] }
 ];

@@ -5,7 +5,7 @@
 	let open = false;
 
 	// Fanned out on a quarter arc, like X's compose button: up, diagonal, left.
-	// Labels sit to the left of each bubble so they never collide on the arc.
+	// The top label sits above its bubble and the others to the left, so none collide.
 	const actions = [
 		{
 			label: 'Download cool CV',
@@ -14,7 +14,8 @@
 			bg: 'bg-teal',
 			stroke: '#17324D',
 			icon: 'M13 3H5v18h12V9M9 13v4M7 15l2 2 2-2M18 2v5M15.5 4.5h5',
-			angle: 90
+			angle: 90,
+			labelAbove: true
 		},
 		{
 			label: 'Download boring CV',
@@ -24,7 +25,8 @@
 			bg: 'bg-white',
 			stroke: '#1B4A74',
 			icon: 'M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 15h6M9 18h4',
-			angle: 135
+			angle: 135,
+			labelAbove: false
 		},
 		{
 			label: 'Get in touch',
@@ -33,11 +35,12 @@
 			bg: 'bg-navy',
 			stroke: '#FFFFFF',
 			icon: 'M3 5h18v14H3zM3 7l9 6 9-6',
-			angle: 180
+			angle: 180,
+			labelAbove: false
 		}
 	];
 
-	const radius = 160;
+	const radius = 92;
 	const offset = (angle: number) => ({
 		x: Math.round(radius * Math.cos((angle * Math.PI) / 180)),
 		y: Math.round(-radius * Math.sin((angle * Math.PI) / 180))
@@ -67,19 +70,19 @@
 			{#each actions as action, i}
 				{@const pos = offset(action.angle)}
 				<li
-					class="absolute right-1/2 top-1/2"
-					style="transform: translate(calc(30px + {pos.x}px), calc(-30px + {pos.y}px))"
+					class="absolute left-1/2 top-1/2 h-[52px] w-[52px]"
+					style="transform: translate(calc(-50% + {pos.x}px), calc(-50% + {pos.y}px))"
 				>
 					<a
 						href={action.href}
 						download={action.download ? '' : undefined}
-						class="group flex flex-row-reverse items-center gap-2"
+						class="group relative block h-full w-full"
 						title={action.hint ? `${action.label} (${action.hint})` : action.label}
 						on:click={() => (open = false)}
 						in:fly={{
 							x: -pos.x,
 							y: -pos.y,
-							duration: 260,
+							duration: 240,
 							delay: i * 40,
 							easing: backOut,
 							opacity: 0
@@ -87,11 +90,11 @@
 						out:fade={{ duration: 120 }}
 					>
 						<span
-							class="flex h-[60px] w-[60px] items-center justify-center rounded-full border-[1.5px] border-navy shadow-macsm transition-transform group-hover:-translate-y-0.5 {action.bg}"
+							class="flex h-full w-full items-center justify-center rounded-full border-[1.5px] border-navy shadow-macsm transition-transform group-hover:-translate-y-0.5 {action.bg}"
 						>
 							<svg
-								width="24"
-								height="24"
+								width="22"
+								height="22"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke={action.stroke}
@@ -102,8 +105,9 @@
 							>
 						</span>
 						<span
-							class="whitespace-nowrap rounded-full border-[1.5px] border-navy bg-white px-2.5 py-0.5 text-xs font-bold text-navy"
-							>{action.label}</span
+							class="absolute whitespace-nowrap rounded-full border-[1.5px] border-navy bg-white px-2.5 py-0.5 text-xs font-bold text-navy {action.labelAbove
+								? 'bottom-full right-0 mb-1.5'
+								: 'right-full top-1/2 mr-1.5 -translate-y-1/2'}">{action.label}</span
 						>
 					</a>
 				</li>

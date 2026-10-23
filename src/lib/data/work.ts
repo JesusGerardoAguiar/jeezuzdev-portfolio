@@ -254,7 +254,7 @@ export const work: WorkItem[] = [
 			'Built on AWS Bedrock with Pinecone and Claude',
 			'Owned retrieval strategy, prompt architecture, and the API'
 		],
-		stack: ['bedrock', 'pinecone', 'claude'],
+		stack: ['bedrock', 'claude'],
 		links: []
 	},
 	{

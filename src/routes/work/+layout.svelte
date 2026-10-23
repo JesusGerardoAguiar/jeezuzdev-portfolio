@@ -13,7 +13,7 @@
 
 <div class="mx-auto max-w-[1440px] px-0 pb-6 md:px-10 md:pt-7">
 	<!-- Phone: a project picker replaces the sidebar -->
-	<div class="px-4 pt-3 md:hidden">
+	<div class="px-4 py-3 md:hidden">
 		<label
 			class="relative flex h-11 items-center justify-between gap-2 rounded-full border border-line bg-white px-3.5 text-sm font-semibold"
 		>

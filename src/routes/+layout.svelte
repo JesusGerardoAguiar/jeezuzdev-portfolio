@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { siGithub } from 'simple-icons';
 	import SpeedDial from '$lib/components/SpeedDial.svelte';
+	import type { WorkItem } from '$lib/data/work';
 
 	const title = 'Jesús Aguiar · Staff Engineer / Engineering Manager';
 	const description =
@@ -21,13 +22,20 @@
 		},
 		{
 			label: 'Built',
-			href: '/#built',
+			href: '/work/lograf-ecommerce',
 			icon: 'M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z'
 		},
 		{ label: 'Writing', href: '/#writing', icon: 'M4 4h10l6 6v10H4zM14 4v6h6M8 14h8M8 17h5' }
 	];
 
-	$: active = (href: string) => (href === '/work' ? $page.url.pathname.startsWith('/work') : false);
+	// Work and Built both open the work section; which one is lit depends on the project's group
+	$: group = ($page.data.item as WorkItem | undefined)?.group;
+	$: active = (label: string) =>
+		label === 'Work'
+			? group === 'client'
+			: label === 'Built'
+			? group === 'own' || group === 'system'
+			: false;
 </script>
 
 <svelte:head>
@@ -71,11 +79,11 @@
 						<a
 							href={item.href}
 							class="inline-flex h-11 items-center rounded-full px-4 text-sm font-semibold text-navy hover:bg-navy/10 {active(
-								item.href
+								item.label
 							)
 								? 'bg-navy/10'
 								: ''}"
-							aria-current={active(item.href) ? 'page' : undefined}>{item.label}</a
+							aria-current={active(item.label) ? 'page' : undefined}>{item.label}</a
 						>
 					</li>
 				{/each}
@@ -132,13 +140,17 @@
 		</nav>
 	</div>
 	<nav aria-label="Sections" class="border-t border-line bg-cream md:hidden">
-		<ul class="flex gap-1 overflow-x-auto px-3 py-1.5">
+		<ul class="grid grid-cols-4 px-3 py-1.5">
 			{#each nav as item}
 				<li>
 					<a
 						href={item.href}
-						class="flex min-w-[68px] flex-col items-center gap-1 rounded-md py-1.5 text-[11px] font-semibold text-navy"
-						aria-current={active(item.href) ? 'page' : undefined}
+						class="flex flex-col items-center gap-1 rounded-md py-1.5 text-[11px] font-semibold text-navy {active(
+							item.label
+						)
+							? 'bg-navy/10'
+							: ''}"
+						aria-current={active(item.label) ? 'page' : undefined}
 					>
 						<svg
 							width="22"
