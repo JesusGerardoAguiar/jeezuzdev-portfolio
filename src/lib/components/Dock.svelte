@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
+	import { spring } from 'svelte/motion';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { siGithub } from 'simple-icons';
@@ -46,7 +47,10 @@
 	const MAX = 1.55;
 	const RANGE = 120;
 
-	let scales = items.map(() => 1);
+	const flat = items.map(() => 1);
+	// A spring rather than CSS transitions: each mousemove retargets it, so icons glide
+	// after the cursor instead of restarting a transition on every event
+	const scales = spring(flat, { stiffness: 0.16, damping: 0.72, precision: 0.001 });
 	let hovered: number | null = null;
 	let open: string | null = null;
 	let shelf: HTMLElement;
@@ -75,14 +79,16 @@
 		if (!centers.length) measure();
 		const box = shelf.getBoundingClientRect();
 		const x = e.clientX - (box.left + box.width / 2);
-		scales = centers.map((c) => {
-			const d = Math.min(Math.abs(x - c) / RANGE, 1);
-			return 1 + ((MAX - 1) * (Math.cos(d * Math.PI) + 1)) / 2;
-		});
+		scales.set(
+			centers.map((c) => {
+				const d = Math.min(Math.abs(x - c) / RANGE, 1);
+				return 1 + ((MAX - 1) * (Math.cos(d * Math.PI) + 1)) / 2;
+			})
+		);
 	}
 
 	function rest() {
-		scales = items.map(() => 1);
+		scales.set(flat);
 		hovered = null;
 	}
 
@@ -193,7 +199,7 @@
 			{#if i === divider}
 				<li class="mx-1 h-8 w-px self-center bg-navy/30" aria-hidden="true" />
 			{/if}
-			<li class="relative flex flex-col items-center" style="width: {BASE * scales[i]}px">
+			<li class="relative flex flex-col items-center" style="width: {BASE * $scales[i]}px">
 				<svelte:element
 					this={item.panel ? 'button' : 'a'}
 					bind:this={tiles[i]}
@@ -210,10 +216,10 @@
 					on:focus={() => (hovered = i)}
 					on:blur={() => (hovered = null)}
 					class="tile {item.tile}"
-					style="width: {BASE * scales[i]}px; height: {BASE * scales[i]}px"
+					style="width: {BASE * $scales[i]}px; height: {BASE * $scales[i]}px"
 				>
 					{#if item.id === 'home'}
-						<span class="font-display font-extrabold text-navy" style="font-size: {16 * scales[i]}px">j<span class="text-tealdeep">.</span></span>
+						<span class="font-display font-extrabold text-navy" style="font-size: {16 * $scales[i]}px">j<span class="text-tealdeep">.</span></span>
 					{:else}
 						<svg viewBox="0 0 24 24" class="h-[52%] w-[52%]" aria-hidden="true">
 							{#if item.id === 'about'}
@@ -250,7 +256,6 @@
 <style lang="postcss">
 	.tile {
 		@apply flex flex-none items-center justify-center rounded-[10px] border-[1.5px] border-navy shadow-macsm;
-		transition: width 90ms ease-out, height 90ms ease-out;
 	}
 	/* Pops up above the dock like a Dock stack */
 	.dock-panel {
@@ -272,10 +277,5 @@
 	.dock-item:hover .dock-hint,
 	.dock-item:focus-visible .dock-hint {
 		@apply text-white/75;
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.tile {
-			transition: none;
-		}
 	}
 </style>
