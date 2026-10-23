@@ -42,9 +42,9 @@
 		{ label: 'Get in touch', hint: 'aguiarf.j16@gmail.com', href: 'mailto:aguiarf.j16@gmail.com', download: false }
 	];
 
-	const BASE = 46;
-	const MAX = 1.7;
-	const RANGE = 150;
+	const BASE = 36;
+	const MAX = 1.55;
+	const RANGE = 120;
 
 	let scales = items.map(() => 1);
 	let hovered: number | null = null;
@@ -123,7 +123,7 @@
 <nav
 	aria-label="Main"
 	bind:this={root}
-	class="fixed bottom-4 left-1/2 z-40 hidden -translate-x-1/2 md:block"
+	class="fixed bottom-3 left-1/2 z-40 hidden -translate-x-1/2 md:block"
 >
 	{#if open}
 		<div
@@ -187,11 +187,11 @@
 		bind:this={shelf}
 		on:mousemove={magnify}
 		on:mouseleave={rest}
-		class="flex h-[64px] items-end gap-2 rounded-[18px] border-[1.5px] border-navy bg-white/80 px-2.5 pb-[7px] shadow-mac backdrop-blur-md"
+		class="flex h-[50px] items-end gap-1.5 rounded-[14px] border-[1.5px] border-navy bg-white/80 px-2 pb-[6px] shadow-mac backdrop-blur-md"
 	>
 		{#each items as item, i}
 			{#if i === divider}
-				<li class="mx-1 h-11 w-px self-center bg-navy/30" aria-hidden="true" />
+				<li class="mx-1 h-8 w-px self-center bg-navy/30" aria-hidden="true" />
 			{/if}
 			<li class="relative flex flex-col items-center" style="width: {BASE * scales[i]}px">
 				<svelte:element
@@ -213,7 +213,7 @@
 					style="width: {BASE * scales[i]}px; height: {BASE * scales[i]}px"
 				>
 					{#if item.id === 'home'}
-						<span class="font-display font-extrabold text-navy" style="font-size: {20 * scales[i]}px">j<span class="text-tealdeep">.</span></span>
+						<span class="font-display font-extrabold text-navy" style="font-size: {16 * scales[i]}px">j<span class="text-tealdeep">.</span></span>
 					{:else}
 						<svg viewBox="0 0 24 24" class="h-[52%] w-[52%]" aria-hidden="true">
 							{#if item.id === 'about'}
@@ -249,12 +249,12 @@
 
 <style lang="postcss">
 	.tile {
-		@apply flex flex-none items-center justify-center rounded-[12px] border-[1.5px] border-navy shadow-macsm;
+		@apply flex flex-none items-center justify-center rounded-[10px] border-[1.5px] border-navy shadow-macsm;
 		transition: width 90ms ease-out, height 90ms ease-out;
 	}
 	/* Pops up above the dock like a Dock stack */
 	.dock-panel {
-		@apply absolute bottom-full mb-8 max-h-[calc(100vh-120px)] w-[360px] -translate-x-1/2 overflow-y-auto rounded-lg border-[1.5px] border-navy bg-white text-ink shadow-mac;
+		@apply absolute bottom-full mb-7 max-h-[calc(100vh-120px)] w-[360px] -translate-x-1/2 overflow-y-auto rounded-lg border-[1.5px] border-navy bg-white text-ink shadow-mac;
 	}
 	.dock-sep {
 		@apply border-t border-dashed border-navy/40;
