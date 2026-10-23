@@ -1,8 +1,7 @@
 <script lang="ts">
-	import StackIcon from '$lib/components/StackIcon.svelte';
+	import StackSlider from '$lib/components/StackSlider.svelte';
 	import WorkLogo from '$lib/components/WorkLogo.svelte';
 	import { groups, work } from '$lib/data/work';
-	import { stack } from '$lib/data/stack';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -26,7 +25,7 @@
 				class="mt-3 font-display text-[32px] font-extrabold leading-[1.1] text-ink md:text-[50px]"
 			>
 				{item.headline}
-				<span class="rounded bg-teal/[.35] px-1.5 text-navy [box-decoration-break:clone]"
+				<span class="whitespace-nowrap rounded bg-teal/[.35] px-1.5 text-navy"
 					>{item.highlight}</span
 				>
 			</h1>
@@ -87,14 +86,9 @@
 	{#if item.stack.length}
 		<section aria-labelledby="stack-heading">
 			<h2 id="stack-heading" class="label-caps">Stack on this project</h2>
-			<ul class="mt-3.5 grid grid-cols-3 gap-4 border-y border-line py-5 md:grid-cols-6">
-				{#each item.stack as key}
-					<li class="flex flex-col items-center gap-1.5 text-center text-sm font-semibold">
-						<StackIcon {key} size={36} />
-						{stack[key].name}
-					</li>
-				{/each}
-			</ul>
+			<div class="mt-3.5 border-y border-line py-5">
+				<StackSlider items={item.stack.map((key) => ({ key }))} />
+			</div>
 		</section>
 	{/if}
 

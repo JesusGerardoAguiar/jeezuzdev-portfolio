@@ -2,13 +2,14 @@
 	import { onMount } from 'svelte';
 	import photo from '$lib/assets/about/aboutme.jpg';
 	import MacWindow from '$lib/components/MacWindow.svelte';
-	import StackIcon from '$lib/components/StackIcon.svelte';
+	import StackSlider from '$lib/components/StackSlider.svelte';
 	import WorkLogo from '$lib/components/WorkLogo.svelte';
 	import { inGroup } from '$lib/data/work';
-	import { stack, stackGroups } from '$lib/data/stack';
+	import { stackGroups } from '$lib/data/stack';
 
 	const clients = inGroup('client');
 	const built = [...inGroup('own'), ...inGroup('system')];
+	const stackItems = stackGroups.flatMap((g) => g.items.map((key) => ({ key, note: g.label })));
 
 	const startHere = [
 		{
@@ -140,7 +141,7 @@
 					<li>
 						<a
 							href="/work/{client.slug}"
-							class="flex min-h-[56px] items-center gap-3 rounded-[10px] border border-line bg-paper px-3.5 py-2.5 hover:border-teal"
+							class="flex min-h-[52px] items-center gap-3 rounded-[10px] border border-line bg-paper px-3.5 py-2 hover:border-teal"
 						>
 							<WorkLogo item={client} size={30} />
 							<span class="flex min-w-0 flex-col gap-0.5">
@@ -154,21 +155,10 @@
 			<a href="/work" class="mt-1 text-sm font-semibold hover:text-tealdeep">All work →</a>
 		</MacWindow>
 
-		<MacWindow title="Stack" class="md:col-span-2">
-			<p class="text-[13px] text-muted">What I reach for.</p>
-			<div class="grid grid-cols-2 gap-x-4 gap-y-5 lg:grid-cols-4">
-				{#each stackGroups as group}
-					<div class="flex flex-col gap-2.5">
-						<h3 class="label-caps">{group.label}</h3>
-						<ul class="flex flex-col gap-2">
-							{#each group.items as key}
-								<li class="flex items-center gap-2.5 text-sm">
-									<StackIcon {key} size={28} />{stack[key].name}
-								</li>
-							{/each}
-						</ul>
-					</div>
-				{/each}
+		<MacWindow title="Stack" class="md:col-span-2" padded={false}>
+			<p class="px-5 pt-4 text-[13px] text-muted">What I reach for.</p>
+			<div class="flex flex-1 items-center pb-5">
+				<div class="min-w-0 flex-1"><StackSlider items={stackItems} size={48} /></div>
 			</div>
 		</MacWindow>
 
