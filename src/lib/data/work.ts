@@ -1,4 +1,4 @@
-import orangetheory from '$lib/assets/works/orangetheory.svg';
+import fitnessFranchise from '$lib/assets/works/fitness-franchise.svg';
 import serraform from '$lib/assets/works/serraform.jpg';
 import lografecommerce from '$lib/assets/builts/lografecommerce.png';
 import lografadmin from '$lib/assets/builts/lografadmin.png';
@@ -56,20 +56,20 @@ const glyphs = {
 
 export const work: WorkItem[] = [
 	{
-		slug: 'orangetheory',
+		slug: 'fitness-franchise',
 		group: 'client',
-		name: 'Orangetheory Fitness',
-		logo: orangetheory,
+		name: 'Global boutique fitness franchise',
+		logo: fitnessFranchise,
 		noindex: true,
 		industry: 'FitTech',
-		mark: 'OT',
+		mark: 'FF',
 		color: '#F26B21',
 		role: 'Engineering Manager',
 		tagline: 'Unified CMS and analytics',
 		headline: 'Two legacy platforms,',
 		highlight: 'one CMS',
 		summary:
-			'Orangetheory ran its studio network on two separate platforms. I led the team that consolidated them into a single Webflow CMS while the product stayed live, and architected the analytics pipeline behind it.',
+			'A global boutique fitness franchise that ran its studio network on two separate platforms. I led the team that consolidated them into a single Webflow CMS while the product stayed live, and architected the analytics pipeline behind it.',
 		did: [
 			'Led the consolidation of two legacy platforms into one unified CMS architecture',
 			'Migrated content, data streams, normalization and localization without taking the product down',
@@ -77,7 +77,6 @@ export const work: WorkItem[] = [
 		],
 		stack: ['react', 'webflow', 'aws', 'snowflake', 'nodejs', 'typescript'],
 		links: [
-			{ label: 'Visit the site', href: 'https://www.orangetheory.com/' },
 			{
 				label: 'Read the Webflow case study',
 				href: 'https://webflow.com/customers/orangetheory-fitness'
