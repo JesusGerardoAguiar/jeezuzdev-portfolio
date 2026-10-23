@@ -15,6 +15,7 @@
 <svelte:head>
 	<title>{item.name} · Jesús Aguiar</title>
 	<meta name="description" content={item.summary} />
+	{#if item.noindex}<meta name="robots" content="noindex, nofollow" />{/if}
 </svelte:head>
 
 <article class="flex flex-col gap-8 px-4 py-6 md:gap-10 md:px-16 md:py-10">

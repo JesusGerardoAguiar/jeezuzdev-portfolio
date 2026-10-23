@@ -22,6 +22,8 @@ export interface WorkItem {
 	glyph?: string;
 	/** Industry tag, shown on selected work */
 	industry?: string;
+	/** Keep the case page out of search results */
+	noindex?: boolean;
 	/** Wide screenshot shown on the case page instead of the logo. */
 	shot?: string;
 	mark: string;
@@ -58,6 +60,7 @@ export const work: WorkItem[] = [
 		group: 'client',
 		name: 'Orangetheory Fitness',
 		logo: orangetheory,
+		noindex: true,
 		industry: 'FitTech',
 		mark: 'OT',
 		color: '#F26B21',
