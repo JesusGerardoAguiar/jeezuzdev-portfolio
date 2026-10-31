@@ -5,7 +5,6 @@
 	import { page } from '$app/stores';
 	import { siGithub } from 'simple-icons';
 	import photo from '$lib/assets/about/aboutme.jpg';
-	import { posts, loadPosts } from '$lib/data/posts';
 
 	// Desktop navigation as a Mac dock pinned to the bottom of the screen, so the page
 	// starts right at the top. Icons magnify toward the cursor like the real one.
@@ -63,7 +62,9 @@
 	let still = false;
 
 	$: path = $page.url.pathname;
-	$: running = (id: string) => (id === 'home' ? path === '/' : id === 'work' && path.startsWith('/work'));
+	$: running = (id: string) =>
+		id === 'home' ? path === '/' : (id === 'work' || id === 'writing') && path.startsWith(`/${id}`);
+	$: posts = $page.data.latestPosts;
 
 	function measure() {
 		const box = shelf.getBoundingClientRect();
@@ -119,7 +120,6 @@
 
 	afterNavigate(() => (open = null));
 	onMount(() => {
-		loadPosts();
 		still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 	});
 </script>
@@ -167,12 +167,12 @@
 				</ul>
 			{:else}
 				<p class="px-4 pb-1.5 pt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-muted">
-					Latest on Medium
+					Latest writing
 				</p>
 				<ol class="px-1.5">
-					{#each $posts as post, i}
+					{#each posts as post, i}
 						<li>
-							<a href={post.link} target="_blank" rel="noreferrer" class="dock-item items-baseline">
+							<a href="/writing/{post.slug}" class="dock-item items-baseline">
 								<span class="dock-hint flex-none font-semibold">{String(i + 1).padStart(2, '0')}</span>
 								<span class="text-sm">{post.title}</span>
 							</a>
@@ -181,9 +181,7 @@
 				</ol>
 				<div class="dock-sep mt-1.5" />
 				<div class="p-1.5">
-					<a href="https://medium.com/@aguiarjesus" target="_blank" rel="noreferrer" class="dock-item text-sm font-semibold">
-						All posts on Medium
-					</a>
+					<a href="/writing" class="dock-item text-sm font-semibold">All writing</a>
 				</div>
 			{/if}
 		</div>

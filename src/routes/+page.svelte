@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import photo from '$lib/assets/about/aboutme.jpg';
 	import MacWindow from '$lib/components/MacWindow.svelte';
 	import StackSlider from '$lib/components/StackSlider.svelte';
 	import WorkLogo from '$lib/components/WorkLogo.svelte';
 	import { inGroup } from '$lib/data/work';
 	import { stackGroups } from '$lib/data/stack';
-	import { posts, loadPosts } from '$lib/data/posts';
+	import { page } from '$app/stores';
 
 	const clients = inGroup('client');
 	const built = [...inGroup('own'), ...inGroup('system')];
@@ -39,7 +38,7 @@
 		{ value: 'GMT-3', label: 'Montevideo' }
 	];
 
-	onMount(loadPosts);
+	$: posts = $page.data.latestPosts;
 </script>
 
 <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-4 pb-6 pt-6 md:gap-7 md:px-16 md:pt-8">
@@ -154,14 +153,12 @@
 		</MacWindow>
 
 		<MacWindow title="Writing" id="writing" class="md:col-span-2 xl:col-span-1">
-			<p class="text-[13px] text-muted">Notes from the work, on Medium.</p>
+			<p class="text-[13px] text-muted">Notes from the work.</p>
 			<ol class="flex flex-col gap-2.5">
-				{#each $posts as post, i}
+				{#each posts as post, i}
 					<li>
 						<a
-							href={post.link}
-							target="_blank"
-							rel="noreferrer"
+							href="/writing/{post.slug}"
 							class="flex items-baseline gap-2.5 text-sm hover:text-tealdeep"
 						>
 							<span class="label-caps flex-none">{String(i + 1).padStart(2, '0')}</span>{post.title}
@@ -169,13 +166,8 @@
 					</li>
 				{/each}
 			</ol>
-			<a
-				href="https://medium.com/@aguiarjesus"
-				target="_blank"
-				rel="noreferrer"
-				class="mt-auto text-sm font-semibold hover:text-tealdeep"
-			>
-				All posts on Medium →
+			<a href="/writing" class="mt-auto text-sm font-semibold hover:text-tealdeep">
+				All writing →
 			</a>
 		</MacWindow>
 	</div>
