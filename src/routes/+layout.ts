@@ -1,2 +1,2 @@
-// Everything is static content; the Medium feed loads client-side
+// Everything is static content. Medium posts are pulled in at build time.
 export const prerender = true;

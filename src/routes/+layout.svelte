@@ -26,7 +26,7 @@
 			href: '/work/lograf-ecommerce',
 			icon: 'M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z'
 		},
-		{ label: 'Writing', href: '/#writing', icon: 'M4 4h10l6 6v10H4zM14 4v6h6M8 14h8M8 17h5' }
+		{ label: 'Writing', href: '/writing', icon: 'M4 4h10l6 6v10H4zM14 4v6h6M8 14h8M8 17h5' }
 	];
 
 	// Phone section bar: Work and Built both open the work section; which one is lit depends on the project's group
@@ -36,6 +36,8 @@
 			? group === 'client'
 			: label === 'Built'
 			? group === 'own' || group === 'system'
+			: label === 'Writing'
+			? $page.url.pathname.startsWith('/writing')
 			: false;
 </script>
 
